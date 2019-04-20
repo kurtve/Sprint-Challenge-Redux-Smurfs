@@ -43,6 +43,10 @@
   margin: 5px;
 }
 
+.smurf button {
+  margin: 5px;
+}
+
 .add-smurf {
   margin: 10px;
   display: flex;

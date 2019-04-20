@@ -6,11 +6,11 @@ import { ADD_SMURF_START } from '../actions';
 import { ADD_SMURF_SUCCESS } from '../actions';
 import { ADD_SMURF_FAIL } from '../actions';
 
-/*
 import { DELETE_SMURF_START } from '../actions';
 import { DELETE_SMURF_SUCCESS } from '../actions';
 import { DELETE_SMURF_FAIL } from '../actions';
 
+/*
 import { UPDATE_SMURF_START } from '../actions';
 import { UPDATE_SMURF_SUCCESS } from '../actions';
 import { UPDATE_SMURF_FAIL } from '../actions';
@@ -76,9 +76,33 @@ export default (state = initialState, action) => {
         error: action.payload
       };
 
+
     // DELETE
+    case DELETE_SMURF_START:
+      return {
+        ...state,
+        deletingSmurf: true,
+        error: null
+      };
+
+    case DELETE_SMURF_SUCCESS:
+      return {
+        ...state,
+        deletingSmurf: false,
+        error: null,
+        smurfs: action.payload
+      };
+
+    case DELETE_SMURF_FAIL:
+      return {
+        ...state,
+        deletingSmurf: false,
+        error: action.payload
+      };
+
 
     // UPDATE (PUT)
+
 
     default:
       return state;
