@@ -26,6 +26,7 @@ export const DELETE_SMURF_FAIL = 'DELETE_SMURF_FAIL';
 
 export const addSmurf = () => dispatch => {
   dispatch({ type: ADD_SMURF_START });
+  /*
   axios
     .get('http://localhost:3333/x')
     .then(res => {
@@ -34,6 +35,7 @@ export const addSmurf = () => dispatch => {
     .error(err => {
       dispatch({ type: ADD_SMURF_FAIL, payload: err})
     });
+  */
 };
 
 

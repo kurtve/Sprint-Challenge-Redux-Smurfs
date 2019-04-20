@@ -1,4 +1,4 @@
-import { ADD_SMURF_START } from '../action';
+import { ADD_SMURF_START } from '../actions';
 import { ADD_SMURF_SUCCESS } from '../actions';
 import { ADD_SMURF_FAIL } from '../actions';
 
@@ -17,10 +17,10 @@ import { DELETE_SMURF_FAIL } from '../actions';
 
 const initialState = {
    smurfs: [],
-   fetchingSmurfs: false
-   addingSmurf: false
-   updatingSmurf: false
-   deletingSmurf: false
+   fetchingSmurfs: false,
+   addingSmurf: false,
+   updatingSmurf: false,
+   deletingSmurf: false,
    error: null
  };
 
