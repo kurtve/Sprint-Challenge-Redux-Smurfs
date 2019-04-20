@@ -1,11 +1,14 @@
+/*
 import { ADD_SMURF_START } from '../actions';
 import { ADD_SMURF_SUCCESS } from '../actions';
 import { ADD_SMURF_FAIL } from '../actions';
+*/
 
 import { GET_SMURFS_START } from '../actions';
 import { GET_SMURFS_SUCCESS } from '../actions';
 import { GET_SMURFS_FAIL } from '../actions';
 
+/*
 import { UPDATE_SMURF_START } from '../actions';
 import { UPDATE_SMURF_SUCCESS } from '../actions';
 import { UPDATE_SMURF_FAIL } from '../actions';
@@ -13,6 +16,7 @@ import { UPDATE_SMURF_FAIL } from '../actions';
 import { DELETE_SMURF_START } from '../actions';
 import { DELETE_SMURF_SUCCESS } from '../actions';
 import { DELETE_SMURF_FAIL } from '../actions';
+*/
 
 
 const initialState = {
