@@ -1,21 +1,19 @@
-/*
-import { ADD_SMURF_START } from '../actions';
-import { ADD_SMURF_SUCCESS } from '../actions';
-import { ADD_SMURF_FAIL } from '../actions';
-*/
-
 import { GET_SMURFS_START } from '../actions';
 import { GET_SMURFS_SUCCESS } from '../actions';
 import { GET_SMURFS_FAIL } from '../actions';
 
-/*
-import { UPDATE_SMURF_START } from '../actions';
-import { UPDATE_SMURF_SUCCESS } from '../actions';
-import { UPDATE_SMURF_FAIL } from '../actions';
+import { ADD_SMURF_START } from '../actions';
+import { ADD_SMURF_SUCCESS } from '../actions';
+import { ADD_SMURF_FAIL } from '../actions';
 
+/*
 import { DELETE_SMURF_START } from '../actions';
 import { DELETE_SMURF_SUCCESS } from '../actions';
 import { DELETE_SMURF_FAIL } from '../actions';
+
+import { UPDATE_SMURF_START } from '../actions';
+import { UPDATE_SMURF_SUCCESS } from '../actions';
+import { UPDATE_SMURF_FAIL } from '../actions';
 */
 
 
@@ -31,6 +29,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    // GET
     case GET_SMURFS_START:
       return {
         ...state,
@@ -54,7 +53,32 @@ export default (state = initialState, action) => {
       };
 
 
+    // ADD (POST)
+    case ADD_SMURF_START:
+      return {
+        ...state,
+        addingSmurf: true,
+        error: null
+      };
 
+    case ADD_SMURF_SUCCESS:
+      return {
+        ...state,
+        addingSmurf: false,
+        error: null,
+        smurfs: action.payload
+      };
+
+    case ADD_SMURF_FAIL:
+      return {
+        ...state,
+        addingSmurf: false,
+        error: action.payload
+      };
+
+    // DELETE
+
+    // UPDATE (PUT)
 
     default:
       return state;
